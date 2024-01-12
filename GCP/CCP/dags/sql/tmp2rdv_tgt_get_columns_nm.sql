@@ -1,0 +1,1 @@
+SELECT STRING_AGG(DISTINCT CAST(COLUMN_NAME AS STRING)) AS tgt_datastore_columns_nm FROM {project}.{tgt_dataset_nm}.INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA="{tgt_dataset_nm}" AND TABLE_NAME="{tgt_datastore_nm}";

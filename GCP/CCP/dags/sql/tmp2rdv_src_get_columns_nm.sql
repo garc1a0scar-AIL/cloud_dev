@@ -1,0 +1,1 @@
+SELECT STRING_AGG(DISTINCT CONCAT ('S.',CAST(COLUMN_NAME AS STRING))) AS src_datastore_columns_nm FROM {project}.{src_dataset_nm}.INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA="{src_dataset_nm}" AND TABLE_NAME="{src_datastore_nm}";
